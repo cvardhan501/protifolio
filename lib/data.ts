@@ -116,6 +116,44 @@ export const freelanceProjects: Project[] = [
     github: "https://github.com/",
     live: "https://gold-delta-murex.vercel.app/",
   },
+   {
+  id: "monolith-gym",
+  title: "Gym Landing Page Theme-1",
+  description:
+    "A premium 3D fitness website featuring cinematic hero animations, interactive training programs, GSAP-powered scroll effects, glassmorphism UI, and immersive luxury gym branding.",
+  tags: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "TypeScript",
+    "Framer Motion",
+    "GSAP",
+    "Three.js",
+    "React Three Fiber"
+  ],
+  color: "#FF6A3D",
+  github: "https://github.com/",
+  live: "https://gym-1-rouge.vercel.app/",
+},
+   {
+  id: "monolith-gym",
+  title: "Gym Landing Page Theme-2",
+  description:
+    "A premium 3D fitness website featuring cinematic hero animations, interactive training programs, GSAP-powered scroll effects, glassmorphism UI, and immersive luxury gym branding.",
+  tags: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "TypeScript",
+    "Framer Motion",
+    "GSAP",
+    "Three.js",
+    "React Three Fiber"
+  ],
+  color: "#FF6A3D",
+  github: "https://github.com/",
+  live: "https://gym-2-jade.vercel.app/",
+},
 ];
 
 export interface ExperienceItem {
