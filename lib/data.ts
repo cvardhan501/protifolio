@@ -78,10 +78,43 @@ export const projects: Project[] = [
     id: "smart-hostel",
     title: "Snake-Game",
     description:
-    "A modern, responsive recreation of the retro arcade classic built with fluid animations and keyboard controls. Features real-time score tracking, persistent high-score saving via local storage, and increasing speed levels to challenge players as the snake grows", tags: ["Next.js", "MongoDB", "Socket.IO"],
+      "A modern, responsive recreation of the retro arcade classic built with fluid animations and keyboard controls. Features real-time score tracking, persistent high-score saving via local storage, and increasing speed levels to challenge players as the snake grows", tags: ["Next.js", "MongoDB", "Socket.IO"],
     color: "#F5C242",
     github: "https://github.com/",
     live: "https://snake-game-tpfk.onrender.com",
+  },
+];
+
+export const freelanceProjects: Project[] = [
+  {
+    id: "digital-menu",
+    title: "Digital Restaurant Menu",
+    description:
+      "An interactive, responsive digital menu card featuring category filtering, live search, and smooth animations for a premium dining experience.",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    color: "#F5C242",
+    github: "https://github.com/",
+    live: "https://meghanas-kitchen-3dmenu.vercel.app/",
+  },
+  {
+    id: "restaurant-pos",
+    title: "Restaurant POS Dashboard",
+    description:
+      "A high-performance Point of Sale dashboard optimized for speed, featuring real-time bill calculations, table tracking, and dynamic order management.",
+    tags: ["Next.js", "Tailwind CSS", "State Management"],
+    color: "#8B5CF6",
+    github: "https://github.com/",
+    live: "https://meghanas-kitchen-pos.vercel.app/",
+  },
+  {
+    id: "luxury-gold-shop",
+    title: "Luxury Gold Shop Webpage",
+    description:
+      "A sophisticated high-end jewelry e-commerce showcase featuring a live gold rate ticker, filterable item catalogs, and elegant visual animations.",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    color: "#F5C242",
+    github: "https://github.com/",
+    live: "https://gold-delta-murex.vercel.app/",
   },
 ];
 
@@ -94,25 +127,25 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    year: "2025 — Present",
+    year: "2026 — Present",
     role: "AI & Full Stack Developer",
     company: "Freelance / Independent",
     description:
       "Designing and shipping full-stack products end to end — from 3D marketing sites to AI-powered internal tools for early-stage teams.",
   },
   {
-    year: "2024 — 2025",
+    year: "2025 — 2026",
     role: "Full Stack Engineer Intern",
     company: "Nimbus Labs",
     description:
       "Built and shipped customer-facing dashboards in Next.js and Node, cutting page load time by 40% through image and bundle optimization.",
   },
   {
-    year: "2023 — 2024",
-    role: "Frontend Developer",
-    company: "Campus Innovation Cell",
+    year: "2025",
+    role: "B.Tech in Computer Science",
+    company: "University",
     description:
-      "Led a team of four to deliver the university's flagship hackathon platform, onboarding 2,000+ participants across three events.",
+      "Started my B.Tech journey, building a strong foundation in computer science, algorithms, and modern software development.",
   },
 ];
 

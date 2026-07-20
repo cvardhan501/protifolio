@@ -86,11 +86,11 @@ export default function About() {
   return (
     <section id="about" className="relative mx-auto max-w-7xl px-6 py-28 md:py-36">
       <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 1.5 }}
           className="relative mx-auto w-full"
         >
           <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-br from-gold/30 via-transparent to-neon/30 blur-xl" />
@@ -101,6 +101,33 @@ export default function About() {
 
               <img
                 src="/images/hero-profile.png"
+                alt="C VISHNU VARDHAN"
+                className="h-full w-full object-cover"
+              />
+
+              <div className="absolute inset-0 rounded-[1.6rem] ring-1 ring-inset ring-gold/20" />
+            </div>
+          </div>
+        </motion.div> */}
+
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          // Added md:mt-12 to push the card down and align with the adjacent paragraph headers
+          className="relative mx-auto w-full max-w-sm md:max-w-[480px] md:mt-20"
+        >
+
+          <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-br from-gold/30 via-transparent to-neon/30 blur-xl" />
+
+
+          <div className="glass relative aspect-[6.5/9.9] overflow-hidden rounded-[2rem] border-gold/30 p-2">
+            <div className="relative h-full w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
+              <div className="absolute inset-0 grid-bg opacity-40" />
+
+              <img
+                src="/images/prof-about.png"
                 alt="C VISHNU VARDHAN"
                 className="h-full w-full object-cover"
               />

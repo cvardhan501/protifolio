@@ -39,7 +39,7 @@ export default function Hero() {
 
           <p className="mt-5 h-8 font-mono text-lg text-neon-soft md:text-xl">
             <TypewriterText
-              words={["AI & ML Engineer","Full Stack Developer","Freelance Web Developer","Custom Website Builder","Available for Freelance"]}
+              words={["AI & ML Engineer", "Full Stack Developer", "Freelance Web Developer", "Custom Website Builder", "Available for Freelance"]}
             />
           </p>
 
@@ -104,7 +104,7 @@ export default function Hero() {
           </div>
         </motion.div> */}
         {/* Right column */}
-{/* <motion.div
+        {/* <motion.div
   initial={{ opacity: 0, x: 30 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8, delay: 0.2 }}
@@ -130,33 +130,33 @@ export default function Hero() {
     </div>
   </div>
 </motion.div> */}
-{/* Right column */}
-<motion.div
-  initial={{ opacity: 0, x: 30 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
-  className="relative order-1 mx-auto flex w-full justify-center lg:order-2"
->
-  <div className="relative w-full max-w-[650px]">
-    <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-br from-gold/30 via-transparent to-neon/30 blur-xl" />
+        {/* Right column */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative order-1 mx-auto flex w-full justify-center lg:order-2"
+        >
+          <div className="relative w-full max-w-[650px]">
+            <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-br from-gold/30 via-transparent to-neon/30 blur-xl" />
 
-    <div className="glass relative overflow-hidden rounded-[2rem] border border-gold/30 p-2">
-      <div className="relative h-[700px] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
-        <div className="absolute inset-0 grid-bg opacity-40" />
+            <div className="glass relative overflow-hidden rounded-[2rem] border border-gold/30 p-2">
+              <div className="relative h-[690px] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
+                <div className="absolute inset-0 grid-bg opacity-40" />
 
-        <Image
-          src="/images/hero-prof.png"
-          alt="C VISHNU VARDHAN"
-          fill
-          priority
-          className="object-cover"
-        />
+                <Image
+                  src="/images/hero-prof.png"
+                  alt="C VISHNU VARDHAN"
+                  fill
+                  priority
+                  className="object-cover"
+                />
 
-        <div className="absolute inset-0 rounded-[1.6rem] ring-1 ring-inset ring-gold/20" />
-      </div>
-    </div>
-  </div>
-</motion.div>
+                <div className="absolute inset-0 rounded-[1.6rem] ring-1 ring-inset ring-gold/20" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
       </div>
     </section>
