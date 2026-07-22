@@ -154,6 +154,42 @@ export const freelanceProjects: Project[] = [
   github: "https://github.com/",
   live: "https://gym-2-jade.vercel.app/",
 },
+ {
+  id: "monolith-gym",
+  title: "Gym Landing Page Theme-3",
+  description:
+    "A premium 3D fitness website featuring cinematic hero animations, interactive training programs, GSAP-powered scroll effects, glassmorphism UI, and immersive luxury gym branding.",
+  tags: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "TypeScript",
+    "Framer Motion",
+    "GSAP",
+    "Three.js",
+    "React Three Fiber"
+  ],
+  color: "#FF6A3D",
+  github: "https://github.com/",
+  live: "https://gym-page3.vercel.app/",
+},
+{
+  id: "scfc-grade-calculator",
+  title: "SCFC Grade Calculator",
+  description:
+    "A premium academic grade calculator that enables SCFC students to calculate SGPA and CGPA through an intuitive glassmorphism interface with dynamic course selection, automatic credit mapping, live calculations, and a responsive user experience.",
+  tags: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Glassmorphism",
+    "Responsive Design",
+    "Local Storage"
+  ],
+  color: "#6C63FF",
+  github: "https://github.com/yourusername/",
+  live: "https://scfc-grade-cal.vercel.app/",
+}
 ];
 
 export interface ExperienceItem {
