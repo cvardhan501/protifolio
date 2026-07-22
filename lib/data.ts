@@ -83,6 +83,23 @@ export const projects: Project[] = [
     github: "https://github.com/",
     live: "https://snake-game-tpfk.onrender.com",
   },
+  {
+  id: "scfc-grade-calculator",
+  title: "SCFC Grade Calculator",
+  description:
+    "A premium academic grade calculator that enables SCFC students to calculate SGPA and CGPA through an intuitive glassmorphism interface with dynamic course selection, automatic credit mapping, live calculations, and a responsive user experience.",
+  tags: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Glassmorphism",
+    "Responsive Design",
+    "Local Storage"
+  ],
+  color: "#6C63FF",
+  github: "https://github.com/yourusername/",
+  live: "https://scfc-grade-cal.vercel.app/",
+},
 ];
 
 export const freelanceProjects: Project[] = [
@@ -173,23 +190,7 @@ export const freelanceProjects: Project[] = [
   github: "https://github.com/",
   live: "https://gym-page3.vercel.app/",
 },
-{
-  id: "scfc-grade-calculator",
-  title: "SCFC Grade Calculator",
-  description:
-    "A premium academic grade calculator that enables SCFC students to calculate SGPA and CGPA through an intuitive glassmorphism interface with dynamic course selection, automatic credit mapping, live calculations, and a responsive user experience.",
-  tags: [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "Glassmorphism",
-    "Responsive Design",
-    "Local Storage"
-  ],
-  color: "#6C63FF",
-  github: "https://github.com/yourusername/",
-  live: "https://scfc-grade-cal.vercel.app/",
-}
+
 ];
 
 export interface ExperienceItem {
