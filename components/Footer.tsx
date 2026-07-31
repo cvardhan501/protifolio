@@ -7,6 +7,13 @@ import { ArrowUp, Github, Linkedin, Instagram, Mail } from "lucide-react";
 const QUICK_LINKS = ["Home", "About", "Skills", "Projects", "Experience"];
 const SERVICES = ["Web Development", "3D & Motion Design", "AI Integration", "UI/UX Design"];
 
+const FOOTER_SOCIALS = [
+  { icon: Github, href: "https://github.com/cvardhan501", label: "Github" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/c-vishnu-vardhan-3435a5240", label: "LinkedIn" },
+  { icon: Instagram, href: "https://instagram.com/", label: "Instagram" },
+  { icon: Mail, href: "mailto:cvardhan501@gmail.com", label: "Email" },
+];
+
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
@@ -61,10 +68,13 @@ export default function Footer() {
               and design.
             </p>
             <div className="mt-5 flex gap-3">
-              {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
+              {FOOTER_SOCIALS.map(({ icon: Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="grid h-9 w-9 place-items-center rounded-full border border-white/10 text-ink-muted transition-colors hover:border-gold/40 hover:text-gold"
                 >
                   <Icon size={15} />

@@ -1,19 +1,22 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Mail, ArrowUpRight, PlayCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Github, Linkedin, Instagram, Mail, ArrowUpRight, PlayCircle, X } from "lucide-react";
 import TypewriterText from "./TypewriterText";
 import MagneticButton from "./MagneticButton";
 
 const SOCIALS = [
-  { icon: Github, href: "https://github.com/", label: "Github" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/c-vishnu-vardhan-3435a5240?utm_source=share_via&", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/cvardhan501", label: "Github" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/c-vishnu-vardhan-3435a5240", label: "LinkedIn" },
   { icon: Instagram, href: "https://instagram.com/", label: "Instagram" },
   { icon: Mail, href: "mailto:cvardhan501@gmail.com", label: "Email" },
 ];
 
 export default function Hero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-32 md:pt-24">
       {/* Background layers */}
@@ -22,7 +25,7 @@ export default function Hero() {
       <div className="absolute bottom-0 right-0 h-[420px] w-[420px] rounded-full bg-radial-glow-neon blur-3xl" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(5,8,22,0.4)_70%,#050816_100%)]" />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-2 lg:gap-4">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-2 lg:gap-8">
         {/* Left column */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -63,7 +66,8 @@ export default function Hero() {
             </MagneticButton>
 
             <MagneticButton
-              className="inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-ink-muted transition-colors hover:text-gold"
+              onClick={() => setIsVideoOpen(true)}
+              className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-5 py-3 text-sm font-semibold text-gold shadow-md backdrop-blur transition-all hover:bg-gold hover:text-void hover:scale-[1.03]"
             >
               <PlayCircle size={20} /> Watch Intro
             </MagneticButton>
@@ -85,63 +89,18 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right column — illustration */}
-        {/* <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="relative order-1 h-[420px] sm:h-[520px] lg:order-2 lg:h-[680px]"
-        >
-          <div className="animate-float-slow relative mx-auto h-full w-full max-w-[560px] drop-shadow-[0_0_70px_rgba(245,194,66,0.22)]">
-            <Image
-              src="/images/hero-prof.png"
-              alt="Illustrated portrait of C Vishnu Vardhan working at a laptop"
-              fill
-              priority
-              sizes="(max-width: 1024px) 90vw, 560px"
-              className="object-contain"
-            />
-          </div>
-        </motion.div> */}
-        {/* Right column */}
-        {/* <motion.div
-  initial={{ opacity: 0, x: 30 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
-  className="relative order-1 mx-auto flex w-full justify-center lg:order-2"
->
-  <div className="relative w-full max-w-[500px]">
-    <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-br from-gold/30 via-transparent to-neon/30 blur-xl" />
-
-    <div className="glass relative overflow-hidden rounded-[2rem] border border-gold/30 p-2">
-      <div className="relative h-[500px] overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
-        <div className="absolute inset-0 grid-bg opacity-40" />
-
-        <Image
-          src="/images/hero-profile.png"
-          alt="C VISHNU VARDHAN"
-          fill
-          priority
-          className="object-cover"
-        />
-
-        <div className="absolute inset-0 rounded-[1.6rem] ring-1 ring-inset ring-gold/20" />
-      </div>
-    </div>
-  </div>
-</motion.div> */}
-        {/* Right column */}
+        {/* Right column — Image */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative order-1 mx-auto flex w-full justify-center lg:order-2"
         >
-          <div className="relative w-full max-w-[650px]">
+          <div className="relative w-full max-w-[480px] lg:max-w-[520px]">
             <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-br from-gold/30 via-transparent to-neon/30 blur-xl" />
 
             <div className="glass relative overflow-hidden rounded-[2rem] border border-gold/30 p-2">
-              <div className="relative h-[690px] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
+              <div className="relative aspect-[6.5/9.9] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
                 <div className="absolute inset-0 grid-bg opacity-40" />
 
                 <Image
@@ -149,16 +108,60 @@ export default function Hero() {
                   alt="C VISHNU VARDHAN"
                   fill
                   priority
-                  className="object-cover"
+                  sizes="(max-width: 1024px) 90vw, 520px"
+                  className="object-cover rounded-[1.6rem]"
                 />
 
-                <div className="absolute inset-0 rounded-[1.6rem] ring-1 ring-inset ring-gold/20" />
+                <div className="absolute inset-0 rounded-[1.6rem] ring-1 ring-inset ring-gold/20 pointer-events-none" />
               </div>
             </div>
           </div>
         </motion.div>
 
       </div>
+
+      {/* Watch Intro Video Modal */}
+      <AnimatePresence>
+        {isVideoOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-void/90 p-4 sm:p-6 backdrop-blur-md"
+            onClick={() => setIsVideoOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="glass relative w-full max-w-4xl overflow-hidden rounded-2xl border border-gold/40 p-2 sm:p-3 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => setIsVideoOpen(false)}
+                className="absolute top-4 right-4 z-10 grid h-10 w-10 place-items-center rounded-full bg-void/80 text-gold border border-gold/40 shadow-lg backdrop-blur-md transition-all hover:bg-gold hover:text-void hover:scale-110 active:scale-95"
+                aria-label="Close intro video"
+              >
+                <X size={20} />
+              </button>
+
+              <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
+                <video
+                  autoPlay
+                  controls
+                  playsInline
+                  className="h-full w-full object-contain"
+                >
+                  <source src="/images/vishnu_port.MP4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

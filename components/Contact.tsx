@@ -8,6 +8,7 @@ type Status = "idle" | "sending" | "sent";
 
 export default function Contact() {
   const [status, setStatus] = useState<Status>("idle");
+  const [feedback, setFeedback] = useState("");
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 
   const handleChange = (field: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -18,6 +19,7 @@ export default function Contact() {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return;
     setStatus("sending");
+    setFeedback("");
 
     try {
       const response = await fetch('/api/send-email', {
@@ -26,17 +28,21 @@ export default function Contact() {
         body: JSON.stringify(form),
       });
 
+      const data = await response.json().catch(() => null);
+
       if (response.ok) {
         setStatus("sent");
         setForm({ name: "", email: "", subject: "", message: "" });
+        setFeedback('Thanks! Your message has been sent.');
         window.setTimeout(() => setStatus("idle"), 3500);
       } else {
-        throw new Error('Failed to send email');
+        setStatus("idle");
+        setFeedback(data?.error || 'Failed to send message. Please try again.');
       }
     } catch (error) {
       console.error('Error:', error);
       setStatus("idle");
-      alert('Failed to send message. Please try again.');
+      setFeedback('Failed to send message. Please try again.');
     }
   };
 
@@ -128,6 +134,12 @@ export default function Contact() {
               </>
             )}
           </button>
+
+          {feedback ? (
+            <p className={`mt-4 text-sm ${status === 'sent' ? 'text-emerald-400' : 'text-rose-400'}`}>
+              {feedback}
+            </p>
+          ) : null}
         </motion.form>
 
         <motion.div
