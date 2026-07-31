@@ -31,7 +31,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="order-1 lg:order-1"
+          className="order-2 lg:order-1"
         >
           <p className="section-label mb-3 sm:mb-4">Hi, I&apos;m</p>
           <h1 className="font-display text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl md:text-7xl">
@@ -89,12 +89,12 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right column — Image */}
+        {/* Right column — Image (Top on mobile) */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative order-2 mx-auto flex w-full justify-center lg:order-2"
+          className="relative order-1 mx-auto flex w-full justify-center lg:order-2"
         >
           <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[500px]">
             <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-br from-gold/30 via-transparent to-neon/30 blur-xl" />
@@ -120,14 +120,14 @@ export default function Hero() {
 
       </div>
 
-      {/* Watch Intro Video Modal */}
+      {/* Watch Intro Video Modal — Exactly matching Hero Card proportions */}
       <AnimatePresence>
         {isVideoOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-void/90 p-4 sm:p-6 backdrop-blur-md"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-void/90 p-4 backdrop-blur-md"
             onClick={() => setIsVideoOpen(false)}
           >
             <motion.div
@@ -135,28 +135,36 @@ export default function Hero() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="glass relative w-full max-w-4xl overflow-hidden rounded-2xl border border-gold/40 p-2 sm:p-3 shadow-2xl"
+              className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[500px]"
               onClick={(e) => e.stopPropagation()}
             >
-              <button
-                type="button"
-                onClick={() => setIsVideoOpen(false)}
-                className="absolute top-4 right-4 z-10 grid h-10 w-10 place-items-center rounded-full bg-void/80 text-gold border border-gold/40 shadow-lg backdrop-blur-md transition-all hover:bg-gold hover:text-void hover:scale-110 active:scale-95"
-                aria-label="Close intro video"
-              >
-                <X size={20} />
-              </button>
+              <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-br from-gold/40 via-transparent to-neon/40 blur-xl" />
 
-              <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
-                <video
-                  autoPlay
-                  controls
-                  playsInline
-                  className="h-full w-full object-contain"
+              <div className="glass relative overflow-hidden rounded-[2rem] border border-gold/40 p-2 shadow-2xl">
+                <button
+                  type="button"
+                  onClick={() => setIsVideoOpen(false)}
+                  className="absolute top-4 right-4 z-30 grid h-9 w-9 place-items-center rounded-full bg-void/80 text-gold border border-gold/40 shadow-lg backdrop-blur-md transition-all hover:bg-gold hover:text-void hover:scale-110 active:scale-95"
+                  aria-label="Close intro video"
                 >
-                  <source src="/images/vishnu_port.MP4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                  <X size={18} />
+                </button>
+
+                <div className="relative aspect-[4/5] sm:aspect-[6.5/9.9] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
+                  <div className="absolute inset-0 grid-bg opacity-40" />
+
+                  <video
+                    autoPlay
+                    controls
+                    playsInline
+                    className="h-full w-full object-cover rounded-[1.6rem]"
+                  >
+                    <source src="/images/vishnu_port.MP4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  <div className="absolute inset-0 rounded-[1.6rem] ring-1 ring-inset ring-gold/20 pointer-events-none" />
+                </div>
               </div>
             </motion.div>
           </motion.div>
