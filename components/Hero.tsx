@@ -89,18 +89,18 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right column — Image (Top on mobile) */}
+        {/* Right column — Image (Top on mobile, increased top height) */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative order-1 mx-auto flex w-full justify-center lg:order-2"
+          className="relative order-1 mx-auto flex w-full justify-center lg:order-2 lg:mt-6"
         >
-          <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[500px]">
+          <div className="relative w-full max-w-[340px] sm:max-w-[460px] lg:max-w-[540px]">
             <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-br from-gold/30 via-transparent to-neon/30 blur-xl" />
 
             <div className="glass relative overflow-hidden rounded-[2rem] border border-gold/30 p-2">
-              <div className="relative aspect-[4/5] sm:aspect-[6.5/9.9] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
+              <div className="relative aspect-[3/4.5] sm:aspect-[6.5/10.5] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
                 <div className="absolute inset-0 grid-bg opacity-40" />
 
                 <Image
@@ -108,7 +108,7 @@ export default function Hero() {
                   alt="C VISHNU VARDHAN"
                   fill
                   priority
-                  sizes="(max-width: 1024px) 90vw, 500px"
+                  sizes="(max-width: 1024px) 90vw, 540px"
                   className="object-cover rounded-[1.6rem]"
                 />
 
@@ -120,7 +120,7 @@ export default function Hero() {
 
       </div>
 
-      {/* Watch Intro Video Modal — Exactly matching Hero Card proportions */}
+      {/* Watch Intro Video Modal — Matching increased card height */}
       <AnimatePresence>
         {isVideoOpen && (
           <motion.div
@@ -135,7 +135,7 @@ export default function Hero() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[500px]"
+              className="relative w-full max-w-[340px] sm:max-w-[460px] lg:max-w-[540px]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-br from-gold/40 via-transparent to-neon/40 blur-xl" />
@@ -150,7 +150,7 @@ export default function Hero() {
                   <X size={18} />
                 </button>
 
-                <div className="relative aspect-[4/5] sm:aspect-[6.5/9.9] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
+                <div className="relative aspect-[3/4.5] sm:aspect-[6.5/10.5] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
                   <div className="absolute inset-0 grid-bg opacity-40" />
 
                   <video
