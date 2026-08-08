@@ -26,9 +26,11 @@ export default function Home() {
         <Projects />
         <Experience />
         <Certificates />
+        {/* Hidden sections until unhide requested:
         <Testimonials />
         <Gallery />
         <Blog />
+        */}
         <Contact />
       </main>
       <Footer />
