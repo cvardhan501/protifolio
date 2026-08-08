@@ -123,12 +123,13 @@ export default function Certificates() {
                 <h3 className="font-display text-xl font-bold text-ink">{modalCert.title}</h3>
                 <p className="text-sm text-ink-muted">{modalCert.issuer} — {modalCert.issueDate || modalCert.year}</p>
               </div>
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-black/40">
+              <div className="relative h-[65vh] md:h-[75vh] w-full overflow-hidden rounded-xl bg-black/40 flex items-center justify-center">
                 <Image
                   src={modalCert.image}
                   alt={modalCert.title}
                   fill
-                  className="object-contain"
+                  className="object-contain p-2"
+                  priority
                 />
               </div>
             </motion.div>
