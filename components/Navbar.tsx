@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sun, Moon, Download, Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
@@ -12,24 +13,18 @@ const LINKS = [
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Certificates", href: "#certificates" },
-  { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [light, setLight] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("light-mode", light);
-  }, [light]);
 
   return (
     <motion.header
@@ -64,21 +59,12 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <button
-            aria-label="Toggle theme"
-            onClick={() => setLight((v) => !v)}
-            className="grid h-9 w-9 place-items-center rounded-full border border-white/10 text-ink-muted transition-colors hover:border-gold/40 hover:text-gold"
-          >
-            {light ? <Sun size={16} /> : <Moon size={16} />}
-          </button>
-
-          <a
-            href="/resume.pdf"
-            download
+          <Link
+            href="/resume"
             className="hidden items-center gap-2 rounded-full bg-gradient-to-r from-gold to-gold-soft px-4 py-2 text-sm font-medium text-void shadow-gold-glow transition-transform hover:scale-105 md:flex"
           >
-            <Download size={15} /> Download CV
-          </a>
+            <Download size={15} /> Resume / CV
+          </Link>
 
           <button
             aria-label="Open menu"

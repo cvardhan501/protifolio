@@ -217,10 +217,10 @@ export const experience: ExperienceItem[] = [
   },
   {
     year: "2025",
-    role: "B.Tech in Computer Science",
-    company: "University",
+    role: "B.Tech in Computer Science & Engineering (AI & ML)",
+    company: "Amity University Bengaluru",
     description:
-      "Started my B.Tech journey, building a strong foundation in computer science, algorithms, and modern software development.",
+      "Pursuing B.Tech CSE in Artificial Intelligence & Machine Learning, building a strong foundation in AI models, software engineering, algorithms, cloud platforms, and modern web applications.",
   },
 ];
 
@@ -369,8 +369,8 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export const stats = [
-  { label: "Projects", value: 15, suffix: "+" },
-  { label: "Technologies", value: 10, suffix: "+" },
-  { label: "Certificates", value: 6, suffix: "+" },
+  { label: "Projects", value: 12, suffix: "+" },
+  { label: "Technologies", value: 14, suffix: "+" },
+  { label: "Certificates", value: 5, suffix: "+" },
   { label: "Years Experience", value: 1, suffix: "+" },
 ];

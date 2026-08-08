@@ -6,7 +6,7 @@ import { Code2, Sparkles, Cpu } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 
 const HIGHLIGHTS = [
-  { icon: Code2, text: "3+ years building production web apps" },
+  { icon: Code2, text: "Building modern, high-performance web applications" },
   { icon: Cpu, text: "Applied AI features shipped to real users" },
   { icon: Sparkles, text: "Obsessed with motion, detail & performance" },
 ];
@@ -65,7 +65,7 @@ export default function About() {
           </p>
 
           <p className="mt-4 leading-relaxed text-ink-muted">
-            As a B.Tech student, I&apos;m continuously learning, building
+            As a B.Tech CSE (AI &amp; ML) student, I&apos;m continuously learning, building
             real-world projects, and taking on freelance opportunities to
             sharpen my skills. My focus is on writing clean, scalable code while
             exploring how AI and thoughtful design can solve real-world

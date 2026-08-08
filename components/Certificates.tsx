@@ -89,9 +89,8 @@ export default function Certificates() {
             key={cert.id}
             aria-label={`Go to ${cert.title}`}
             onClick={() => setActive(i)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              i === active ? "w-6 bg-gold" : "w-1.5 bg-white/20"
-            }`}
+            className={`h-1.5 rounded-full transition-all duration-300 ${i === active ? "w-6 bg-gold" : "w-1.5 bg-white/20"
+              }`}
           />
         ))}
       </div>
@@ -123,13 +122,12 @@ export default function Certificates() {
                 <h3 className="font-display text-xl font-bold text-ink">{modalCert.title}</h3>
                 <p className="text-sm text-ink-muted">{modalCert.issuer} — {modalCert.issueDate || modalCert.year}</p>
               </div>
-              <div className="relative h-[65vh] md:h-[75vh] w-full overflow-hidden rounded-xl bg-black/40 flex items-center justify-center">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-black/40">
                 <Image
                   src={modalCert.image}
                   alt={modalCert.title}
                   fill
-                  className="object-contain p-2"
-                  priority
+                  className="object-contain"
                 />
               </div>
             </motion.div>
