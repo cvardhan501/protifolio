@@ -236,6 +236,15 @@ export interface Certificate {
 
 export const certificates: Certificate[] = [
   {
+    id: "c-postman-api",
+    title: "Postman API Fundamentals Student Expert",
+    issuer: "Postman",
+    year: "2026",
+    color: "#FF6C37",
+    image: "/images/postman-api-fundamentals.png",
+    issueDate: "January 08, 2026",
+  },
+  {
     id: "c-aws-ml-ai",
     title: "Fundamentals of Machine Learning and Artificial Intelligence",
     issuer: "AWS Training & Certification",
@@ -244,11 +253,33 @@ export const certificates: Certificate[] = [
     image: "/images/aws-ml-ai-certificate.png",
     issueDate: "August 08, 2026",
   },
-  { id: "c1", title: "Full Stack Web Development", issuer: "Meta", year: "2024", color: "#F5C242" },
-  { id: "c2", title: "Machine Learning Specialization", issuer: "DeepLearning.AI", year: "2024", color: "#8B5CF6" },
-  { id: "c3", title: "AWS Cloud Practitioner", issuer: "Amazon Web Services", year: "2023", color: "#F5C242" },
-  { id: "c4", title: "Advanced React & Next.js", issuer: "Vercel", year: "2025", color: "#8B5CF6" },
-  { id: "c5", title: "Data Structures & Algorithms", issuer: "GeeksforGeeks", year: "2023", color: "#F5C242" },
+  {
+    id: "c-aws-community-day",
+    title: "AWS Student Community Day Bengaluru 2026",
+    issuer: "Amity University & AWS Cloud Club",
+    year: "2026",
+    color: "#00A4E4",
+    image: "/images/aws-community-day-bengaluru.png",
+    issueDate: "2026",
+  },
+  {
+    id: "c-be10x-ai-tools",
+    title: "AI Tools and ChatGPT Workshop",
+    issuer: "be10x",
+    year: "2026",
+    color: "#8B5CF6",
+    image: "/images/be10x-ai-tools-workshop.jpg",
+    issueDate: "May 31, 2026",
+  },
+  {
+    id: "c-aub-sih-2025",
+    title: "AUB Smart India Hackathon 2025",
+    issuer: "Amity University & SIH",
+    year: "2025",
+    color: "#10B981",
+    image: "/images/aub-smart-india-hackathon-2025.png",
+    issueDate: "September 25, 2025",
+  },
 ];
 
 export interface Testimonial {
