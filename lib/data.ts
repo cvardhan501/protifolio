@@ -10,17 +10,17 @@ export const skills: Skill[] = [
   { name: "React", level: 95, category: "Frontend" },
   { name: "Next.js", level: 92, category: "Frontend" },
   { name: "TypeScript", level: 88, category: "Frontend" },
+  { name: "JavaScript", level: 92, category: "Frontend" },
   { name: "Tailwind CSS", level: 94, category: "Frontend" },
-  { name: "Three.js", level: 80, category: "Frontend" },
+  { name: "HTML5 & CSS3", level: 95, category: "Frontend" },
   { name: "Node.js", level: 90, category: "Backend" },
   { name: "Express", level: 87, category: "Backend" },
   { name: "MongoDB", level: 85, category: "Backend" },
-  { name: "Firebase", level: 78, category: "Backend" },
+  { name: "REST APIs", level: 88, category: "Backend" },
   { name: "Python", level: 89, category: "AI/ML" },
-  { name: "TensorFlow", level: 74, category: "AI/ML" },
-  { name: "Java", level: 76, category: "Tools" },
-  { name: "C++", level: 70, category: "Tools" },
-  { name: "Docker", level: 72, category: "Tools" },
+  { name: "AI Tools & Prompting", level: 85, category: "AI/ML" },
+  { name: "Git & GitHub", level: 90, category: "Tools" },
+  { name: "Postman API", level: 88, category: "Tools" },
 ];
 
 export interface Project {
@@ -84,22 +84,22 @@ export const projects: Project[] = [
     live: "https://snake-game-tpfk.onrender.com",
   },
   {
-  id: "scfc-grade-calculator",
-  title: "SCFC Grade Calculator",
-  description:
-    "A premium academic grade calculator that enables SCFC students to calculate SGPA and CGPA through an intuitive glassmorphism interface with dynamic course selection, automatic credit mapping, live calculations, and a responsive user experience.",
-  tags: [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "Glassmorphism",
-    "Responsive Design",
-    "Local Storage"
-  ],
-  color: "#6C63FF",
-  github: "https://github.com/yourusername/",
-  live: "https://scfc-grade-cal.vercel.app/",
-},
+    id: "scfc-grade-calculator",
+    title: "SCFC Grade Calculator",
+    description:
+      "A premium academic grade calculator that enables SCFC students to calculate SGPA and CGPA through an intuitive glassmorphism interface with dynamic course selection, automatic credit mapping, live calculations, and a responsive user experience.",
+    tags: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Glassmorphism",
+      "Responsive Design",
+      "Local Storage"
+    ],
+    color: "#6C63FF",
+    github: "https://github.com/yourusername/",
+    live: "https://scfc-grade-cal.vercel.app/",
+  },
 ];
 
 export const freelanceProjects: Project[] = [
@@ -133,63 +133,63 @@ export const freelanceProjects: Project[] = [
     github: "https://github.com/",
     live: "https://gold-delta-murex.vercel.app/",
   },
-   {
-  id: "monolith-gym",
-  title: "Gym Landing Page Theme-1",
-  description:
-    "A premium 3D fitness website featuring cinematic hero animations, interactive training programs, GSAP-powered scroll effects, glassmorphism UI, and immersive luxury gym branding.",
-  tags: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "TypeScript",
-    "Framer Motion",
-    "GSAP",
-    "Three.js",
-    "React Three Fiber"
-  ],
-  color: "#FF6A3D",
-  github: "https://github.com/",
-  live: "https://gym-1-rouge.vercel.app/",
-},
-   {
-  id: "monolith-gym",
-  title: "Gym Landing Page Theme-2",
-  description:
-    "A premium 3D fitness website featuring cinematic hero animations, interactive training programs, GSAP-powered scroll effects, glassmorphism UI, and immersive luxury gym branding.",
-  tags: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "TypeScript",
-    "Framer Motion",
-    "GSAP",
-    "Three.js",
-    "React Three Fiber"
-  ],
-  color: "#FF6A3D",
-  github: "https://github.com/",
-  live: "https://gym-2-jade.vercel.app/",
-},
- {
-  id: "monolith-gym",
-  title: "Gym Landing Page Theme-3",
-  description:
-    "A premium 3D fitness website featuring cinematic hero animations, interactive training programs, GSAP-powered scroll effects, glassmorphism UI, and immersive luxury gym branding.",
-  tags: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "TypeScript",
-    "Framer Motion",
-    "GSAP",
-    "Three.js",
-    "React Three Fiber"
-  ],
-  color: "#FF6A3D",
-  github: "https://github.com/",
-  live: "https://gym-page3.vercel.app/",
-},
+  {
+    id: "monolith-gym",
+    title: "Gym Landing Page Theme-1",
+    description:
+      "A premium 3D fitness website featuring cinematic hero animations, interactive training programs, GSAP-powered scroll effects, glassmorphism UI, and immersive luxury gym branding.",
+    tags: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "Framer Motion",
+      "GSAP",
+      "Three.js",
+      "React Three Fiber"
+    ],
+    color: "#FF6A3D",
+    github: "https://github.com/",
+    live: "https://gym-1-rouge.vercel.app/",
+  },
+  {
+    id: "monolith-gym",
+    title: "Gym Landing Page Theme-2",
+    description:
+      "A premium 3D fitness website featuring cinematic hero animations, interactive training programs, GSAP-powered scroll effects, glassmorphism UI, and immersive luxury gym branding.",
+    tags: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "Framer Motion",
+      "GSAP",
+      "Three.js",
+      "React Three Fiber"
+    ],
+    color: "#FF6A3D",
+    github: "https://github.com/",
+    live: "https://gym-2-jade.vercel.app/",
+  },
+  {
+    id: "monolith-gym",
+    title: "Gym Landing Page Theme-3",
+    description:
+      "A premium 3D fitness website featuring cinematic hero animations, interactive training programs, GSAP-powered scroll effects, glassmorphism UI, and immersive luxury gym branding.",
+    tags: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "Framer Motion",
+      "GSAP",
+      "Three.js",
+      "React Three Fiber"
+    ],
+    color: "#FF6A3D",
+    github: "https://github.com/",
+    live: "https://gym-page3.vercel.app/",
+  },
 
 ];
 
@@ -236,15 +236,6 @@ export interface Certificate {
 
 export const certificates: Certificate[] = [
   {
-    id: "c-postman-api",
-    title: "Postman API Fundamentals Student Expert",
-    issuer: "Postman",
-    year: "2026",
-    color: "#FF6C37",
-    image: "/images/postman-api-fundamentals.png",
-    issueDate: "January 08, 2026",
-  },
-  {
     id: "c-aws-ml-ai",
     title: "Fundamentals of Machine Learning and Artificial Intelligence",
     issuer: "AWS Training & Certification",
@@ -253,33 +244,11 @@ export const certificates: Certificate[] = [
     image: "/images/aws-ml-ai-certificate.png",
     issueDate: "August 08, 2026",
   },
-  {
-    id: "c-aws-community-day",
-    title: "AWS Student Community Day Bengaluru 2026",
-    issuer: "Amity University & AWS Cloud Club",
-    year: "2026",
-    color: "#00A4E4",
-    image: "/images/aws-community-day-bengaluru.png",
-    issueDate: "2026",
-  },
-  {
-    id: "c-be10x-ai-tools",
-    title: "AI Tools and ChatGPT Workshop",
-    issuer: "be10x",
-    year: "2026",
-    color: "#8B5CF6",
-    image: "/images/be10x-ai-tools-workshop.jpg",
-    issueDate: "May 31, 2026",
-  },
-  {
-    id: "c-aub-sih-2025",
-    title: "AUB Smart India Hackathon 2025",
-    issuer: "Amity University & SIH",
-    year: "2025",
-    color: "#10B981",
-    image: "/images/aub-smart-india-hackathon-2025.png",
-    issueDate: "September 25, 2025",
-  },
+  { id: "c1", title: "Full Stack Web Development", issuer: "Meta", year: "2024", color: "#F5C242" },
+  { id: "c2", title: "Machine Learning Specialization", issuer: "DeepLearning.AI", year: "2024", color: "#8B5CF6" },
+  { id: "c3", title: "AWS Cloud Practitioner", issuer: "Amazon Web Services", year: "2023", color: "#F5C242" },
+  { id: "c4", title: "Advanced React & Next.js", issuer: "Vercel", year: "2025", color: "#8B5CF6" },
+  { id: "c5", title: "Data Structures & Algorithms", issuer: "GeeksforGeeks", year: "2023", color: "#F5C242" },
 ];
 
 export interface Testimonial {
@@ -371,6 +340,6 @@ export const blogPosts: BlogPost[] = [
 export const stats = [
   { label: "Projects", value: 15, suffix: "+" },
   { label: "Technologies", value: 10, suffix: "+" },
-  { label: "Certificates", value: 5, suffix: "+" },
+  { label: "Certificates", value: 6, suffix: "+" },
   { label: "Years Experience", value: 1, suffix: "+" },
 ];
