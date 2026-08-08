@@ -230,9 +230,20 @@ export interface Certificate {
   issuer: string;
   year: string;
   color: string;
+  image?: string;
+  issueDate?: string;
 }
 
 export const certificates: Certificate[] = [
+  {
+    id: "c-aws-ml-ai",
+    title: "Fundamentals of Machine Learning and Artificial Intelligence",
+    issuer: "AWS Training & Certification",
+    year: "2026",
+    color: "#FF9900",
+    image: "/images/aws-ml-ai-certificate.png",
+    issueDate: "August 08, 2026",
+  },
   { id: "c1", title: "Full Stack Web Development", issuer: "Meta", year: "2024", color: "#F5C242" },
   { id: "c2", title: "Machine Learning Specialization", issuer: "DeepLearning.AI", year: "2024", color: "#8B5CF6" },
   { id: "c3", title: "AWS Cloud Practitioner", issuer: "Amazon Web Services", year: "2023", color: "#F5C242" },
@@ -329,6 +340,6 @@ export const blogPosts: BlogPost[] = [
 export const stats = [
   { label: "Projects", value: 15, suffix: "+" },
   { label: "Technologies", value: 10, suffix: "+" },
-  { label: "Certificates", value: 5, suffix: "+" },
+  { label: "Certificates", value: 6, suffix: "+" },
   { label: "Years Experience", value: 1, suffix: "+" },
 ];
