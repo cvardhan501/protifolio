@@ -271,6 +271,15 @@ export const certificates: Certificate[] = [
     image: "/images/be10x-ai-tools-workshop.jpg",
     issueDate: "May 31, 2026",
   },
+  {
+    id: "c-aub-sih-2025",
+    title: "AUB Smart India Hackathon 2025",
+    issuer: "Amity University & SIH",
+    year: "2025",
+    color: "#10B981",
+    image: "/images/aub-smart-india-hackathon-2025.png",
+    issueDate: "September 25, 2025",
+  },
 ];
 
 export interface Testimonial {
@@ -362,6 +371,6 @@ export const blogPosts: BlogPost[] = [
 export const stats = [
   { label: "Projects", value: 15, suffix: "+" },
   { label: "Technologies", value: 10, suffix: "+" },
-  { label: "Certificates", value: 4, suffix: "+" },
+  { label: "Certificates", value: 5, suffix: "+" },
   { label: "Years Experience", value: 1, suffix: "+" },
 ];
