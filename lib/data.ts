@@ -35,6 +35,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "ftp-three",
+    title: "FTP Three",
+    description:
+      "A lightweight FTP client UI deployed to Vercel.",
+    tags: ["Next.js", "Vercel"],
+    color: "#10B981",
+    github: "https://github.com/",
+    live: "https://ftp-three.vercel.app/",
+  },
+  {
     id: "finlytics",
     title: "Finlytics",
     description:
