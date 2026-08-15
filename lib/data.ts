@@ -35,6 +35,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "airdropx",
+    title: "AirDropX",
+    description:
+      "An offline P2P file sharing web app utilizing WebRTC for seamless local Wi-Fi device discovery and data transfer.",
+    tags: ["WebRTC", "P2P", "Next.js"],
+    color: "#06B6D4",
+    github: "https://github.com/",
+    live: "https://airdropx.vercel.app/",
+  },
+  {
     id: "ftp-three",
     title: "FTP Three",
     description:
