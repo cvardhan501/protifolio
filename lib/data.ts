@@ -35,6 +35,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "my-vault",
+    title: "My Vault",
+    description:
+      "A highly secure personal digital vault for centralizing and managing sensitive records, credentials, and encrypted documents featuring 256-bit encryption and 2FA support.",
+    tags: ["Next.js", "Node.js", "MongoDB", "256-bit Encryption"],
+    color: "#10B981",
+    github: "https://github.com/",
+    live: "https://my-vault-six.vercel.app",
+  },
+  {
     id: "airdropx",
     title: "AirDropX",
     description:
@@ -380,7 +390,7 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export const stats = [
-  { label: "Projects", value: 12, suffix: "+" },
+  { label: "Projects", value: 14, suffix: "+" },
   { label: "Technologies", value: 14, suffix: "+" },
   { label: "Certificates", value: 5, suffix: "+" },
   { label: "Years Experience", value: 1, suffix: "+" },
