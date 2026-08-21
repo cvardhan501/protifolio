@@ -257,6 +257,15 @@ export interface Certificate {
 
 export const certificates: Certificate[] = [
   {
+    id: "c-gemini-certified-student",
+    title: "Gemini Certified Student",
+    issuer: "Google for Education",
+    year: "2026",
+    color: "#4285F4",
+    image: "/images/gemini-certified-student.png",
+    issueDate: "August 21, 2026",
+  },
+  {
     id: "c-postman-api",
     title: "Postman API Fundamentals Student Expert",
     issuer: "Postman",
@@ -392,6 +401,6 @@ export const blogPosts: BlogPost[] = [
 export const stats = [
   { label: "Projects", value: 14, suffix: "+" },
   { label: "Technologies", value: 14, suffix: "+" },
-  { label: "Certificates", value: 5, suffix: "+" },
+  { label: "Certificates", value: 6, suffix: "+" },
   { label: "Years Experience", value: 1, suffix: "+" },
 ];
