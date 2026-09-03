@@ -54,7 +54,7 @@ export const projects: Project[] = [
     github: "https://github.com/",
     live: "https://ftp-three.vercel.app/",
   },
- 
+
   {
     id: "finlytics",
     title: "Finlytics",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "MongoDB", "Chart.js", "JWT"],
     color: "#F5C242",
     github: "https://github.com/",
-    live: "https://finlytics-bz6f.onrender.com",
+    live: "https://finlytics-blue.vercel.app/",
   },
   {
     id: "meghanas-kitchen",
