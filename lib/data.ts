@@ -257,6 +257,24 @@ export interface Certificate {
 
 export const certificates: Certificate[] = [
   {
+    id: "c-data-analytics-sim",
+    title: "Data Analytics Job Simulation",
+    issuer: "Forage / Accenture",
+    year: "2026",
+    color: "#EC4899",
+    image: "/images/data-analytics-job-simulation.png",
+    issueDate: "August 28, 2026",
+  },
+  {
+    id: "c-cyber-job-sim",
+    title: "Cybersecurity Job Simulation",
+    issuer: "Forage / Mastercard",
+    year: "2026",
+    color: "#06B6D4",
+    image: "/images/cyber-job-simulation.png",
+    issueDate: "August 24, 2026",
+  },
+  {
     id: "c-gemini-certified-student",
     title: "Gemini Certified Student",
     issuer: "Google for Education",
@@ -264,15 +282,6 @@ export const certificates: Certificate[] = [
     color: "#4285F4",
     image: "/images/gemini-certified-student.png",
     issueDate: "August 21, 2026",
-  },
-  {
-    id: "c-postman-api",
-    title: "Postman API Fundamentals Student Expert",
-    issuer: "Postman",
-    year: "2026",
-    color: "#FF6C37",
-    image: "/images/postman-api-fundamentals.png",
-    issueDate: "January 08, 2026",
   },
   {
     id: "c-aws-ml-ai",
@@ -290,7 +299,7 @@ export const certificates: Certificate[] = [
     year: "2026",
     color: "#00A4E4",
     image: "/images/aws-community-day-bengaluru.png",
-    issueDate: "2026",
+    issueDate: "August 01, 2026",
   },
   {
     id: "c-be10x-ai-tools",
@@ -300,6 +309,15 @@ export const certificates: Certificate[] = [
     color: "#8B5CF6",
     image: "/images/be10x-ai-tools-workshop.jpg",
     issueDate: "May 31, 2026",
+  },
+  {
+    id: "c-postman-api",
+    title: "Postman API Fundamentals Student Expert",
+    issuer: "Postman",
+    year: "2026",
+    color: "#FF6C37",
+    image: "/images/postman-api-fundamentals.png",
+    issueDate: "January 08, 2026",
   },
   {
     id: "c-aub-sih-2025",
