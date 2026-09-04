@@ -150,16 +150,18 @@ export default function Hero() {
                   <X size={18} />
                 </button>
 
-                <div className="relative aspect-[3/4.5] sm:aspect-[6.5/10.5] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void">
+                <div className="relative aspect-[9/15.2] max-h-[82vh] w-full overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-void-light to-void flex items-center justify-center">
                   <div className="absolute inset-0 grid-bg opacity-40" />
 
                   <video
                     autoPlay
                     controls
                     playsInline
-                    className="h-full w-full object-cover rounded-[1.6rem]"
+                    className="h-full w-full object-cover object-top scale-[1.08] origin-top rounded-[1.6rem]"
                   >
+                    <source src="/images/port.MP4" type="video/mp4" />
                     <source src="/images/vishnu_port.MP4" type="video/mp4" />
+                    <source src="/images/vishnu_port.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
 
