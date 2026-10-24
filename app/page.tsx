@@ -6,6 +6,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Certificates from "@/components/Certificates";
+import Achievements from "@/components/Achievements";
 import Testimonials from "@/components/Testimonials";
 import Gallery from "@/components/Gallery";
 import Blog from "@/components/Blog";
@@ -26,11 +27,12 @@ export default function Home() {
         <Projects />
         <Experience />
         <Certificates />
+        <Achievements />
         {/* Hidden until unhide requested:
         <Testimonials />
+        */}
         <Gallery />
         <Blog />
-        */}
         <Contact />
       </main>
       <Footer />

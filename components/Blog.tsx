@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
+import Image from "next/image";
 import { blogPosts } from "@/lib/data";
 
 export default function Blog() {
@@ -14,7 +15,13 @@ export default function Blog() {
         </h2>
       </div>
 
-      <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div
+        className={
+          blogPosts.length === 1
+            ? "mx-auto mt-14 max-w-xl"
+            : "mt-14 grid grid-cols-1 gap-6 md:grid-cols-3"
+        }
+      >
         {blogPosts.map((post, i) => (
           <motion.article
             key={post.id}
@@ -25,19 +32,43 @@ export default function Blog() {
             className="glass glass-hover group flex flex-col overflow-hidden rounded-2xl"
           >
             <div
-              className="h-40 w-full"
+              className="relative h-48 w-full overflow-hidden"
               style={{ background: `linear-gradient(155deg, ${post.color}30, #0c1330 75%)` }}
-            />
+            >
+              {post.image && (
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  priority
+                  unoptimized
+                  className="object-cover object-top sm:object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 600px"
+                />
+              )}
+            </div>
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-center gap-1.5 text-xs text-ink-muted">
                 <Calendar size={12} /> {post.date}
               </div>
               <h3 className="mt-3 font-display text-lg font-semibold text-ink">{post.title}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted">{post.excerpt}</p>
-              <button className="mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-gold">
-                Read More
-                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-              </button>
+              {post.url ? (
+                <a
+                  href={post.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-gold"
+                >
+                  Read More
+                  <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                </a>
+              ) : (
+                <button className="mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-gold">
+                  Read More
+                  <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                </button>
+              )}
             </div>
           </motion.article>
         ))}
